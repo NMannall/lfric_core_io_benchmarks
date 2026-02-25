@@ -1,0 +1,6 @@
+[submodule "lfric_core"]
+	path = lfric_core
+	url = git@github.com:EdHone/lfric_core.git
+        branch = 216-iodemo-bench-vernier
+        # Update to lfric_core repo when necessary changes are on main
+        # url = git@github.com:MetOffice/lfric_core.git
