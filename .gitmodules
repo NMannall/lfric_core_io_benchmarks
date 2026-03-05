@@ -1,6 +1,14 @@
 [submodule "lfric_core"]
 	path = lfric_core
-	url = git@github.com:EdHone/lfric_core.git
-        branch = 216-iodemo-bench-vernier
+	# url = git@github.com:EdHone/lfric_core.git
+        # branch = 216-iodemo-bench-vernier
         # Update to lfric_core repo when necessary changes are on main
-        # url = git@github.com:MetOffice/lfric_core.git
+        url = git@github.com:MetOffice/lfric_core.git
+[submodule "XIOS2"]
+	path = XIOS2
+	url = git@gitlab.in2p3.fr:ipsl/projets/xios-projects/xios.git
+	branch = XIOS2
+[submodule "XIOS3"]
+	path = XIOS3
+	url = git@gitlab.in2p3.fr:ipsl/projets/xios-projects/xios.git
+	branch = main
