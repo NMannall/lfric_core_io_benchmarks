@@ -3,8 +3,20 @@
 # It describes a set of packages to be installed, along with
 # configuration settings.
 spack:
+  packages:
+    all:
+      prefer:
+      - '%gcc'
   # add package specs to the `specs` list
-  specs: []
+  specs:
+  - py-cylc-flow
+  - py-psyclone
+  - yaxt
+  - rose-picker
+  - pfunit+mpi+openmp
+  - nano
+  - time
   view: true
   concretizer:
+    # reuse: true
     unify: true
