@@ -23,7 +23,6 @@ These steps should be completed without the spack environment loaded.
 
 ```bash
 git apply patch_lfric_core.diff
-salloc -p debug -n 1 -N 1 -c 1 --mem=16G -A pawsey0835  # Need to run on a compute node to run the unit tests
 . setonix.env
 cd lfric_core/applications/io-demo
 make
