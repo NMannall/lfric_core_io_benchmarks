@@ -1,0 +1,34 @@
+Submodule lfric_core contains modified content
+diff --git a/lfric_core/infrastructure/build/compile.mk b/lfric_core/infrastructure/build/compile.mk
+index a25f466d6..6e32e5640 100644
+--- a/lfric_core/infrastructure/build/compile.mk
++++ b/lfric_core/infrastructure/build/compile.mk
+@@ -87,7 +87,7 @@ MOD_DIR ?= mod
+ #
+ ifeq ($(shell uname),Linux)
+   $(warning linux)
+-  TIME_TOOL = /usr/bin/time -f "Compiled $<: Wallclock=%E, Highwater=%MKiB"
++  TIME_TOOL = time -f "Compiled $<: Wallclock=%E, Highwater=%MKiB"
+ else
+   $(warning not linux)
+   TIME_TOOL = time
+diff --git a/lfric_core/infrastructure/build/tests.mk b/lfric_core/infrastructure/build/tests.mk
+index fcb7be98e..49176f35d 100644
+--- a/lfric_core/infrastructure/build/tests.mk
++++ b/lfric_core/infrastructure/build/tests.mk
+@@ -17,13 +17,13 @@ endif
+ 
+ ifdef MPI_TESTS
+   UNIT_TEST_PRE_PROCESS_MACROS = USE_MPI=YES
+-  LAUNCHER = mpiexec -n 6
++  LAUNCHER = srun -n 6
+ else
+   UNIT_TEST_PRE_PROCESS_MACROS = NO_MPI=no_mpi
+   # It seems that the Cray 'ftn' wrapper always builds for MPI...
+   #
+   ifdef CRAY_ENVIRONMENT
+-    LAUNCHER = mpiexec -n 1
++    LAUNCHER = srun -n 1
+   endif
+ endif
+ 
