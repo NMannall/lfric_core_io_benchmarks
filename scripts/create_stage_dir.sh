@@ -22,7 +22,7 @@ done
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
 # Create stage directory path
-RUN_DIR=$STAGE_DIR/stage/$1
+RUN_DIR=$STAGE_DIR/$1
 mkdir -p $RUN_DIR
 rm $RUN_DIR/*
 
@@ -55,10 +55,10 @@ cat > $RUN_DIR/job.slurm << EOL
 #SBATCH --account=$PAWSEY_PROJECT
 #SBATCH --nodes=$NODES
 #SBATCH --time=01:00:00
-#SBATCH --partition=debug
+#SBATCH --partition=work
 #SBATCH --exclusive
 
-. ../../setonix.env
+. $BASE_DIR/setonix.env
 
 export OMP_NUM_THREADS=1
 export OMP_PROC_BIND=spread

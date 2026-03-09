@@ -22,7 +22,7 @@ done
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
 # Go to stage directory
-RUN_DIR=$STAGE_DIR/stage/$1
+RUN_DIR=$STAGE_DIR/$1
 cd $RUN_DIR
 
 # Submit job
