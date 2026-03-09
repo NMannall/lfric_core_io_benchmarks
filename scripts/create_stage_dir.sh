@@ -54,7 +54,7 @@ cat > $RUN_DIR/job.slurm << EOL
 #SBATCH --job-name=$1
 #SBATCH --account=$PAWSEY_PROJECT
 #SBATCH --nodes=$NODES
-#SBATCH --time=01:00:00
+#SBATCH --time=00:20:00
 #SBATCH --partition=work
 #SBATCH --exclusive
 
