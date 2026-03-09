@@ -1,0 +1,5 @@
+export IO_DEMO_NODES=37
+export IO_DEMO_TASKS=4704
+
+export XIOS_NODES=4
+export XIOS_TASKS=32
