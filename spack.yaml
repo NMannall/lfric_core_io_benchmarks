@@ -16,6 +16,8 @@ spack:
   - pfunit+mpi+openmp
   - nano
   - time
+  - darshan-util
+  - darshan-runtime +hdf5+lustre
   view: true
   concretizer:
     # reuse: true
