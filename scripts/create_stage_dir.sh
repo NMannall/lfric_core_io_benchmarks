@@ -39,7 +39,7 @@ sed -i "s/C24/$2/g" $RUN_DIR/configuration.nml
 
 # Create symbolic link to the io-demo and xios_server executables
 ln -s $IO_DEMO_EXE $RUN_DIR/io_demo
-ln -s $XIOS2_EXE $RUN_DIR/xios_server.exe
+ln -s $XIOS_EXE $RUN_DIR/xios_server.exe
 
 # Create job script
 source $CONFIGS_DIR/$2.param
